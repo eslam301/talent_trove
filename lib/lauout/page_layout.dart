@@ -36,34 +36,34 @@ class PageLayout extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {},
-                child: Text("Home",
+                child: const Text("Home",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
                         color: Colors.black)),
               ),
-              SizedBox(width: 32),
+              const SizedBox(width: 32),
               TextButton(
                 onPressed: () {},
-                child: Text("Dashboard",
+                child: const Text("Dashboard",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
                         color: Colors.black)),
               ),
-              SizedBox(width: 32),
+              const SizedBox(width: 32),
               TextButton(
                 onPressed: () {},
-                child: Text("Register",
+                child: const Text("Register",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
                         color: Colors.black)),
               ),
-              SizedBox(width: 32),
+              const SizedBox(width: 32),
               TextButton(
                 onPressed: () {},
-                child: Text("About Us",
+                child: const Text("About Us",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
@@ -99,13 +99,13 @@ class PageLayout extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Image.asset("assets/images/user_image.png"),
               ),
-              Icon(Icons.arrow_drop_down, color: Colors.black)
+              const Icon(Icons.arrow_drop_down, color: Colors.black)
             ],
           )
         ],
       ),
       body: Padding(
-          padding: EdgeInsets.only(left: 35.0, right: 35.0, top: 80.0, bottom: 10.0),
+          padding: const EdgeInsets.only(left: 35.0, right: 35.0, top: 80.0, bottom: 10.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
@@ -114,9 +114,9 @@ class PageLayout extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text("Professional Portfolio.  Your Expertise Online ",
+                  const Text("Professional Portfolio.  Your Expertise Online ",
                       style: TextStyle(fontSize: 72, fontWeight: FontWeight.w400)),
-                  Text("""
+                  const Text("""
 This platform boasts a contemporary and user-friendly design, 
 
 offering a comprehensive view of your professional journey.   It combines essential information with engaging visuals 
@@ -131,12 +131,6 @@ The site is optimized for different devices, ensuring accessibility and a seamle
                           color: Color(0xff757575))),
                   FilledButton(
                       onPressed: () {},
-                      child: Text('Explore',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w400
-                          )),
                       style: ButtonStyle(
                         shape: MaterialStateProperty.all(
                             RoundedRectangleBorder(
@@ -146,14 +140,20 @@ The site is optimized for different devices, ensuring accessibility and a seamle
                         ),
 
                         padding: MaterialStateProperty.all(
-                            EdgeInsets.symmetric(
+                            const EdgeInsets.symmetric(
                                 horizontal: 48.0, vertical: 24.0
                             )
                         ),
                         backgroundColor: MaterialStateProperty.all(
                             Colors.black,
                         ),
-                        )
+                        ),
+                      child: const Text('Explore',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              fontWeight: FontWeight.w400
+                          ))
                       )
 
                 ]),
@@ -164,7 +164,7 @@ The site is optimized for different devices, ensuring accessibility and a seamle
                         left: 23,
                         child: SvgPicture.asset('assets/icons/Star6.svg',color: Colors.black,)),
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 50.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 50.0),
                       width: 482,
                       height: 622,
                       decoration: BoxDecoration(
@@ -180,12 +180,12 @@ The site is optimized for different devices, ensuring accessibility and a seamle
                   ],
                 )
               ]),
-              Column(
+              const Column(
                 children: [
-                  const Divider(
+                  Divider(
                     color: Color(0xffD4D2E3),
                   ),
-                  const Text(
+                  Text(
                       "Copyright © 2023 TalentTrove | All Rights Reserved | Terms and Conditions | Privacy Policy",
                       style: TextStyle(
                         fontSize: 18,
