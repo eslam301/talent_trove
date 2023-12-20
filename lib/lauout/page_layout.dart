@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../pages/dash_board/dash_board.dart';
 import '../pages/landing/landing_page_view.dart';
+
+
 class PageLayout extends StatefulWidget {
   static const String routeName = '/page_layout';
 
@@ -12,7 +14,7 @@ class PageLayout extends StatefulWidget {
 }
 
 class _PageLayoutState extends State<PageLayout> {
-  final List<Widget> pages = const [LandingView(), DashBoard(), LandingView()];
+  List pages = const [LandingView(), DashBoard(), LandingView()];
   int currentPage = 1;
 
   @override
@@ -50,11 +52,11 @@ class _PageLayoutState extends State<PageLayout> {
                     currentPage = 0;
                   });
                 },
-                child: const Text("Home",
+                child: Text("Home",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black)),
+                        color: currentPage == 0 ? Color(0xff2990F1):Colors.black )),
               ),
               const SizedBox(width: 32),
               TextButton(
@@ -63,31 +65,31 @@ class _PageLayoutState extends State<PageLayout> {
                     currentPage = 1;
                   });
                 },
-                child: const Text("Dashboard",
+                child: Text("Dashboard",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black)),
+                        color: currentPage == 1 ? Color(0xff2990F1):Colors.black)),
               ),
               const SizedBox(width: 32),
               TextButton(
                 onPressed: () {},
-                child: const Text("Register",
+                child: Text("Register",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black)),
+                        color: currentPage == 2 ?  Color(0xff2990F1):Colors.black)),
               ),
               const SizedBox(width: 32),
               TextButton(
                 onPressed: () {},
-                child: const Text("About Us",
+                child: Text("About Us",
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
-                        color: Colors.black)),
+                        color: currentPage == 3 ? Color(0xff2990F1):Colors.black ),
               ),
-            ],
+              )],
           ),
         ),
         actions: [

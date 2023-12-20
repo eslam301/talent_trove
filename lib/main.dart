@@ -16,9 +16,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: PageLayout.routeName,
       routes: {
-        PageLayout.routeName: (context) => PageLayout(),
+        PageLayout.routeName: (context) => const PageLayout(),
       },
-
     );
   }
 }
