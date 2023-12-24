@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ButtonApp extends StatelessWidget {
-  VoidCallback onPressed;
+  final VoidCallback onPressed;
   final Color backgroundColor;
   final String text;
   final Color textColor;
   final double width;
   final double height;
   final double textFontSize;
-  ButtonApp({super.key ,
+  const ButtonApp({super.key ,
     required this.onPressed ,
     this.backgroundColor = const Color(0xff324D6C),
     required this.text,

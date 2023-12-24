@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class RowOfInputFields extends StatelessWidget {
-  String title ;
-  TextEditingController controller;
-  int? maxLines = 1;
+  final String title ;
+  final TextEditingController controller;
+  final int maxLines;
 
-  RowOfInputFields({
+  const RowOfInputFields({
     super.key,
     required this.controller,
     required this.title,
-    this.maxLines
+    this.maxLines = 1,
   });
 
   @override

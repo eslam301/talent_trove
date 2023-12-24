@@ -8,12 +8,12 @@ class TextAreaApp extends StatefulWidget {
   final TextEditingController controller;
   final int maxLines;
   final Color backgroundColor;
-  double width;
-  double height;
-  bool isPassword;
+  final double width;
+  final double height;
+  final bool isPassword;
 
 
-  TextAreaApp({
+  const TextAreaApp({
     super.key,
     required this.Title,
     required this.controller,
