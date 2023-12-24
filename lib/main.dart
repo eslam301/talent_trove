@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:talent_trove/pages/Register/sign_in.dart';
+import 'package:talent_trove/pages/Register/sign_up.dart';
 
 import 'lauout/page_layout.dart';
 
@@ -17,6 +19,8 @@ class MyApp extends StatelessWidget {
       initialRoute: PageLayout.routeName,
       routes: {
         PageLayout.routeName: (context) => const PageLayout(),
+        SignIn.routeName: (context) => SignIn(),
+        SignUp.routeName: (context) => SignUp(),
       },
     );
   }

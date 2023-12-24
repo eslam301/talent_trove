@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:talent_trove/pages/Register/sign_in.dart';
 import '../pages/dash_board/dash_board.dart';
 import '../pages/landing/landing_page_view.dart';
 
@@ -14,7 +15,10 @@ class PageLayout extends StatefulWidget {
 }
 
 class _PageLayoutState extends State<PageLayout> {
-  List pages = const [LandingView(), DashBoard(), LandingView()];
+  List pages = const [
+    LandingView(),
+    DashBoard(),
+  ];
   int currentPage = 1;
 
   @override
@@ -73,7 +77,9 @@ class _PageLayoutState extends State<PageLayout> {
               ),
               const SizedBox(width: 32),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, SignIn.routeName);
+                },
                 child: Text("Register",
                     style: TextStyle(
                         fontSize: 24,
@@ -117,7 +123,15 @@ class _PageLayoutState extends State<PageLayout> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
-                child: Image.asset("assets/images/user_image.png"),
+                child: Container(
+                    width: 40,
+                    height: 40,
+                    clipBehavior: Clip.antiAlias,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+
+                    ),
+                    child: Image.asset("assets/images/user_image.png")),
               ),
               const Icon(Icons.arrow_drop_down, color: Colors.black)
             ],

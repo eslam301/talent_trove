@@ -20,7 +20,7 @@ class SignIn extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        centerTitle: false,
         elevation: 5,
         backgroundColor: Colors.white,
         toolbarHeight: 89,
@@ -58,9 +58,9 @@ class SignIn extends StatelessWidget {
                             color: Color(0xff000000),
                           )),
                       TextAreaApp(
-                        Title: "Email",
+                        Title: "Username",
                         controller: emailController,
-                        hint: 'Enter your email here',
+                        hint: 'Enter your User name here',
                         backgroundColor: const Color(0xccdfe3e7),
                       ),
                       TextAreaApp(

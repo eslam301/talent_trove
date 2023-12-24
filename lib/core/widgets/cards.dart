@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import 'package:flutter/material.dart';
 
-class ReactionCard extends StatelessWidget {
-  final String title;
-  final String count;
-  final String imgIconPath;
-  const ReactionCard({
-=======
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ReactionCard extends StatelessWidget {
@@ -15,7 +6,6 @@ class ReactionCard extends StatelessWidget {
   String count;
   String imgIconPath;
   ReactionCard({
->>>>>>> origin/master
     super.key,
     required this.title,
     required this.count,
@@ -50,11 +40,7 @@ class ReactionCard extends StatelessWidget {
           Image.asset(imgIconPath),
           Text(
               title,
-<<<<<<< HEAD
               style: const TextStyle(
-=======
-              style: TextStyle(
->>>>>>> origin/master
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
                 color: Color(0xff64748B),
@@ -62,11 +48,7 @@ class ReactionCard extends StatelessWidget {
           ),
           Text(
               count,
-<<<<<<< HEAD
               style: const TextStyle(
-=======
-              style: TextStyle(
->>>>>>> origin/master
                 fontSize: 30,
                 fontWeight: FontWeight.w600,
               )

@@ -8,9 +8,9 @@ import '../../core/widgets/text_area.dart';
 class SignUp extends StatelessWidget {
   static const String routeName = 'SignUp';
 
-  final TextEditingController nameController = TextEditingController();
+  final TextEditingController firstNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController titleJobController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController = TextEditingController();
 
@@ -21,7 +21,7 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        centerTitle: false,
         elevation: 5,
         backgroundColor: Colors.white,
         toolbarHeight: 89,
@@ -45,7 +45,7 @@ class SignUp extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 80.0),
+        padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 80.0),
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -67,19 +67,24 @@ class SignUp extends StatelessWidget {
                             color: Color(0xff000000),
                           )),
                       TextAreaApp(
-                        Title: "Name",
-                        controller: nameController,
+                        Title: "first Name",
+                        controller: firstNameController,
+                        hint: 'Tanzir Rahman',
+                      ),
+                      TextAreaApp(
+                        Title: "Username",
+                        controller: firstNameController,
+                        hint: 'Tanzir Rahman',
+                      ),
+                      TextAreaApp(
+                        Title: "last Name",
+                        controller: lastNameController,
                         hint: 'Tanzir Rahman',
                       ),
                       TextAreaApp(
                         Title: "Email Address",
                         controller: emailController,
                         hint: 'hello@example.com',
-                      ),
-                      TextAreaApp(
-                        Title: "Title Job",
-                        controller: titleJobController,
-                        hint: 'Software eng',
                       ),
                       TextAreaApp(
                         Title: "Password",

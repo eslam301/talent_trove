@@ -1,7 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:talent_trove/pages/dash_board/notices_view.dart';
+import 'package:talent_trove/pages/dash_board/portfolio_view.dart';
+import 'package:talent_trove/pages/dash_board/profile_view.dart';
 import '../../core/widgets/menu_button.dart';
 import 'ProjectsView.dart';
+import 'f_and_q.dart';
 import 'home.dart';
 
 class DashBoard extends StatefulWidget {
@@ -16,8 +20,13 @@ class _DashBoardState extends State<DashBoard> {
   List<Widget> pages = [
     Home(),
     ProjectsView(),
+    NoticesView(),
+    ProfileView(),
+    PortfolioView(),
+    FANDQ(),
+
   ];
-  int index = 1 ;
+  int index = 0 ;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +57,15 @@ class _DashBoardState extends State<DashBoard> {
                     const SizedBox(height: 50),
                     Row(
                         children: [
-                          Image.asset("assets/images/user_image.png", width: 57, height: 58),
+                          Container(
+                              width: 57,
+                              height: 58,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Image.asset("assets/images/user_image.png", width: 57, height: 58)),
+                          const SizedBox(width: 8),
                           const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -104,7 +121,7 @@ class _DashBoardState extends State<DashBoard> {
                     MenuButton(isSelected: index==3 ? true : false, svgIconPath: "assets/icons/Profile.svg", title: "Profile",onTap: (){ setState(() {index = 3;});},),
                     MenuButton(isSelected: index==4 ? true : false, svgIconPath: "assets/icons/ProfileMenue.svg", title: "Portfolio",onTap: (){ setState(() {index = 4;});},),
                     MenuButton(isSelected: index==5 ? true : false, svgIconPath: "assets/icons/Info Square.svg", title: "FAQ’s",onTap: (){ setState(() {index = 5;});},),
-                    MenuButton(isSelected: index==6 ? true : false, svgIconPath: "assets/icons/Logout.svg", title: "Logout",onTap: (){ setState(() {index = 6;});},),
+                    MenuButton(isSelected: index==6 ? true : false, svgIconPath: "assets/icons/Logout.svg", title: "Logout",onTap: (){ setState(() {});},),
                   ]
               )
           ),//sidebar
