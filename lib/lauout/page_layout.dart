@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:talent_trove/pages/Register/sign_in.dart';
 import '../pages/dash_board/dash_board.dart';
 import '../pages/landing/landing_page_view.dart';
+
 
 class PageLayout extends StatefulWidget {
   static const String routeName = '/page_layout';
@@ -14,10 +14,7 @@ class PageLayout extends StatefulWidget {
 }
 
 class _PageLayoutState extends State<PageLayout> {
-  List pages = [
-    const LandingView(),
-    const DashBoard(),
-  ];
+  List pages = const [LandingView(), DashBoard(), LandingView()];
   int currentPage = 1;
 
   @override
@@ -41,8 +38,7 @@ class _PageLayoutState extends State<PageLayout> {
                           color: Colors.black,
                           fontSize: 24,
                           fontWeight: FontWeight.bold))),
-              SvgPicture.asset("assets/icons/T_logo.svg",
-                  width: 72, height: 62),
+              SvgPicture.asset("assets/icons/T_logo.svg", width: 72, height: 62),
             ],
           ),
         ),
@@ -60,9 +56,7 @@ class _PageLayoutState extends State<PageLayout> {
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
-                        color: currentPage == 0
-                            ? Color(0xff2990F1)
-                            : Colors.black)),
+                        color: currentPage == 0 ? Color(0xff2990F1):Colors.black )),
               ),
               const SizedBox(width: 32),
               TextButton(
@@ -75,38 +69,27 @@ class _PageLayoutState extends State<PageLayout> {
                     style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w400,
-                        color: currentPage == 1
-                            ? Color(0xff2990F1)
-                            : Colors.black)),
-              ),
-              const SizedBox(width: 32),
-              TextButton(
-                onPressed: () {
-                  setState(() {
-                    Navigator.pushReplacementNamed(context, SignIn.routeName);
-                  });
-                },
-                child: Text("Register",
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w400,
-                        color: currentPage == 2
-                            ? const Color(0xff2990F1)
-                            : Colors.black)),
+                        color: currentPage == 1 ? Color(0xff2990F1):Colors.black)),
               ),
               const SizedBox(width: 32),
               TextButton(
                 onPressed: () {},
-                child: Text(
-                  "About Us",
-                  style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w400,
-                      color:
-                          currentPage == 3 ? Color(0xff2990F1) : Colors.black),
-                ),
-              )
-            ],
+                child: Text("Register",
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w400,
+                        color: currentPage == 2 ?  Color(0xff2990F1):Colors.black)),
+              ),
+              const SizedBox(width: 32),
+              TextButton(
+                onPressed: () {},
+                child: Text("About Us",
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w400,
+                        color: currentPage == 3 ? Color(0xff2990F1):Colors.black ),
+              ),
+              )],
           ),
         ),
         actions: [
@@ -134,21 +117,14 @@ class _PageLayoutState extends State<PageLayout> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
-                child: Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    clipBehavior: Clip.antiAlias,
-                    child: Image.asset("assets/images/user_image.png")),
+                child: Image.asset("assets/images/user_image.png"),
               ),
               const Icon(Icons.arrow_drop_down, color: Colors.black)
             ],
           )
         ],
       ),
-      body: pages[currentPage],
+      body:pages[currentPage],
     );
   }
 }

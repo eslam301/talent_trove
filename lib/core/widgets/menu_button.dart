@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class MenuButton extends StatelessWidget {
-  final bool isSelected ;
-  final String svgIconPath;
-  final String title;
-  final VoidCallback onTap ;
-  const MenuButton({
+  bool isSelected = false;
+  String svgIconPath;
+  String title;
+  Function onTap ;
+  MenuButton({
     super.key,
-    this.isSelected = false,
+    required this.isSelected,
     required this.svgIconPath,
     required this.title,
     required this.onTap
@@ -18,7 +18,9 @@ class MenuButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: (){
+        onTap();
+      },
       child: Container(
         width: 250,
         height: 50,

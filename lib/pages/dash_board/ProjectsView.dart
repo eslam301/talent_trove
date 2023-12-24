@@ -10,7 +10,8 @@ class ProjectsView extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-        margin:const EdgeInsets.only(top: 51, bottom: 51, left: 91, right: 650),
+        margin:
+            const EdgeInsets.only(top: 51, bottom: 51, left: 91, right: 650),
         decoration: const BoxDecoration(
           color: Colors.white,
         ),
@@ -114,7 +115,7 @@ class ProjectsView extends StatelessWidget {
                     ))
                   ]
                 ),
-                const SizedBox(height: 15,),
+                SizedBox(height: 15,),
                 FilledButton(onPressed: (){},
                     style: ButtonStyle(
                       padding: MaterialStateProperty.all(

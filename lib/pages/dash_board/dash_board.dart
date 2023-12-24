@@ -1,12 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:talent_trove/pages/dash_board/portfolio_view.dart';
-import 'package:talent_trove/pages/dash_board/profile_view.dart';
 import '../../core/widgets/menu_button.dart';
 import 'ProjectsView.dart';
-import 'f_and_q.dart';
 import 'home.dart';
-import 'notices_view.dart';
 
 class DashBoard extends StatefulWidget {
 
@@ -20,20 +16,14 @@ class _DashBoardState extends State<DashBoard> {
   List<Widget> pages = [
     Home(),
     ProjectsView(),
-    NoticesView(),
-    ProfileView(),
-    PortfolioView(),
-    FANDQ(),
   ];
-  int index = 5 ;
+  int index = 1 ;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
               width: 230,
@@ -58,12 +48,7 @@ class _DashBoardState extends State<DashBoard> {
                     const SizedBox(height: 50),
                     Row(
                         children: [
-                          Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              clipBehavior: Clip.antiAlias,
-                              child: Image.asset("assets/images/user_image.png", width: 57, height: 58,)),
+                          Image.asset("assets/images/user_image.png", width: 57, height: 58),
                           const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
